@@ -1,6 +1,6 @@
 
 pipeline {
-    agent any //name of the agent
+    agent any 
     stages{
         stage ('Just Test') { 
             steps {
