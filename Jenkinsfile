@@ -21,12 +21,13 @@ pipeline {
             }    
         }   
         stage ('API Test') { 
-            steps {       
+            steps {  
+                dir('api-test')  {
                 git branch: 'main', url: 'https://github.com/JonasLopesdeAlmeida/tasks-api-test'
                 bat 'mvn test' 
+                }
             }    
-        }         
-    }
-  
-}
+         }         
+     }
+  }
 
